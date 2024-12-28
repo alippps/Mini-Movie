@@ -1,36 +1,38 @@
 $(".search-button").on("click", function () {
   $.ajax({
     url:
-      "http://www.omdbapi.com/?apikey=95e0ddf&s=" + $(".input-keyword").val(),
+      "https://www.omdbapi.com/?apikey=95e0ddf&s=" + $(".input-keyword").val(),
     success: (result) => {
       const movie = result.Search;
       let cards = "";
       movie.forEach((m) => {
-        cards += showcards(m);
+        cards += showCards(m);
       });
       $(".movie-container").html(cards);
+
       // Ketika detail di click
       $(".modal-detail").on("click", function () {
-        const imdbid = $(this).data("imdbid");
         $.ajax({
-          url: "http://www.omdbapi.com/?apikey=95e0ddf&i=" + imdbid,
+          url:
+            "https://www.omdbapi.com/?apikey=95e0ddf&i=" +
+            $(this).data("imdbid"),
           success: (m) => {
             const MoviesDetail = ShowMovieDetail(m);
             $(".modal-body").html(MoviesDetail);
           },
-          error: (err) => {
-            console.log(err.responseText);
+          error: (e) => {
+            console.log(e.responseText);
           },
         });
       });
     },
-    error: (err) => {
-      console.log(err.responseText);
+    error: (e) => {
+      console.log(e.responseText);
     },
   });
 });
 
-function showcards(m) {
+function showCards(m) {
   return ` <div class="col-md-4 my-3">
           <div class="card">
             <img src="${m.Poster}" class="card-img-top" />
