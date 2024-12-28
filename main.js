@@ -20,13 +20,13 @@ $(".search-button").on("click", function () {
             $(".modal-body").html(MoviesDetail);
           },
           eror: (err) => {
-            console.log(err.respontTEXT);
+            console.log(err.responseText);
           },
         });
       });
     },
     eror: (err) => {
-      console.log(err.respontTEXT);
+      console.log(err.responseText);
     },
   });
 });
