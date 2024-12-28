@@ -19,13 +19,13 @@ $(".search-button").on("click", function () {
             const MoviesDetail = ShowMovieDetail(m);
             $(".modal-body").html(MoviesDetail);
           },
-          eror: (err) => {
+          error: (err) => {
             console.log(err.responseText);
           },
         });
       });
     },
-    eror: (err) => {
+    error: (err) => {
       console.log(err.responseText);
     },
   });
