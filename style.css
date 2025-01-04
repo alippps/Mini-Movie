@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.col {
+  text-align: center;
+  font-family: Goldman Static, serif;
+}
+.card-header {
+  justify-content: center;
+}
+
+/* .row {
+  position:;
+} */
