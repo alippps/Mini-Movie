@@ -14,3 +14,16 @@ body {
 /* .row {
   position:;
 } */
+
+ marquee{
+
+  justify-content: center;
+  background-color: rgba(255, 99, 71, 0.2);
+  font-size: 35px;
+ }
+
+ button{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #638C6D;
+ color:whitesmoke;
+ }
