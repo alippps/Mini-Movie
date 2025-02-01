@@ -2,18 +2,27 @@ body {
   margin: 0;
   padding: 0;
 }
+/* .wraping{
+  background-color:#A6CDC6;
+} */
 
+img{
+  display: inline-block;
+  position: absolute;
+  size: 100%;
+}
+.row{
+  justify-content: center;
+  font-family: Goldman StatiSc, serif;
+}
 .col {
   text-align: center;
-  font-family: Goldman Static, serif;
+  font-size: 100px;
+  font-size: 100px;
+  color: #16404D;
+  
 }
-.card-header {
-  justify-content: center;
-}
-
-/* .row {
-  position:;
-} */
+/*  */
 
  marquee{
 
